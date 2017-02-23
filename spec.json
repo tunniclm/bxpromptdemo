@@ -1,0 +1,23 @@
+{
+  "appType": "crud",
+  "appName": "todolist",
+  "metrics": true,
+  "autoscale": true,
+  "bluemix": true,
+  "services": {
+    "cloudant": [
+      {
+        "type": "cloudant",
+        "host": "localhost",
+        "port": 5984,
+        "secured": false,
+        "name": "cloudantCrudService"
+      }
+    ]
+  },
+  "config": {
+    "logger": "helium",
+    "port": 8090
+  },
+  "crudservice": "cloudantCrudService"
+}
