@@ -14,9 +14,8 @@ public class GeneratedApplication {
 
     public init(configURL: URL) throws {
         router = Router()
-        manager = try ConfigurationManager()
-                          .load(url: configURL)
-                          .load(.environmentVariables)
+        manager = ConfigurationManager().load(url: configURL)
+                                        .load(.environmentVariables)
         // Set up monitoring
         let sm = try SwiftMetrics()
         let _ = try SwiftMetricsDash(swiftMetricsInstance : sm, endpoint: router)

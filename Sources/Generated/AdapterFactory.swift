@@ -15,7 +15,7 @@ public class AdapterFactory {
       return TodoCloudantAdapter(ConnectionProperties(
           host:     service.host,
           port:     Int16(service.port),
-          secured:  false, // FIXME Fix CloudConfiguration
+          secured:  true, // FIXME Fix CloudConfiguration
           username: service.username,
           password: service.password
       ))
